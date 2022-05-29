@@ -24,14 +24,14 @@ appended in clockwise order.*
 
 ```python
 input = [[2, 3, 4, 8],
-				[5, 7, 9, 12],
-				[1, 0, 6, 10]]
+	[5, 7, 9, 12],
+	[1, 0, 6, 10]]
 
 clockwiseMatrix(input)
 >>2, 3, 4, 8, 12, 10, 6, 0, 1, 5, 7, 9
 
 input = [[1, 2],
-				[3, 4]]
+	[3, 4]]
 
 clockwiseMatrix(input)
 >>1,2,4,3
