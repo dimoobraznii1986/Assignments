@@ -1,4 +1,4 @@
-from clockwise.clockwiseMatrix import *
+from clockwise.clockwise import clockwiseMatrix
 
 TestMatricx = [[1,2],
                [3,4]]
