@@ -2,7 +2,7 @@
 
 ## Part 1 Software Version Analytics
 
-Please check this documnet [Data Platform Considerations](https://github.com/dimoobraznii1986/e-assignment/blob/main/data-platform-proposal.md)
+Please review this detail documnet [Data Platform Considerations](https://github.com/dimoobraznii1986/e-assignment/blob/main/data-platform-proposal.md)
 
 ## Part 2 Clockwise Matrics
 
@@ -14,6 +14,7 @@ The solution has:
 - CI pipeline
 	- linting
 	- testing
+	- formating
 
 ### Task
 *Write a function that, given a matrix of integers, builds a string with the entries of that matrix
