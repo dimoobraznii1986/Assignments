@@ -9,30 +9,34 @@ def clockwiseMatrix(matrix):
     #starting coordinates
     x = 0 #rows
     y = 0 #columns
+    
+    result = []
 
     while x < w and y < w:
         #Print the 1st row
         for i in range(y,w):
-            print(matrix[x][i], end=" ")
+            result.append(str(matrix[x][i]))
 
         x += 1
 
         #Print last column elements
         for i in range(x,h):
-            print(matrix[i][w - 1], end=" ")
+            result.append(str(matrix[i][w - 1]))
 
         w -= 1
 
         #Print bottom row backwards
         if x < h:
             for i in range(w - 1, y - 1, -1):
-                print(matrix[h-1][i], end =" ")
+                result.append(str(matrix[h-1][i]))
 
             h -= 1
 
         #Print first column without printed element
         if y < w:
             for i in range(h - 1, x - 1, -1):
-                print(matrix[i][y], end=" ")
+                result.append(str(matrix[i][y]))
 
             y += 1
+            
+    return ' '.join(result)
