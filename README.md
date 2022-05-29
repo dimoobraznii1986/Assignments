@@ -6,8 +6,16 @@ Please check this documnet [Data Platform Considerations](https://github.com/dim
 
 ## Part 2 Clockwise Matrics
 
+### Repo Structure
 [![Test Multiple Python Versions](https://github.com/dimoobraznii1986/e-assignment/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/dimoobraznii1986/e-assignment/actions/workflows/main.yml)
 
+The solution has:
+- function `clockwiseMatrix` 
+- CI pipeline
+	- linting
+	- testing
+
+### Task
 *Write a function that, given a matrix of integers, builds a string with the entries of that matrix
 appended in clockwise order.*
 
@@ -30,7 +38,7 @@ clockwiseMatrix(input)
 
 *How can you verify that your solution is correct?*
 
-# Solution
+### Solution
 
 Let’s look the first example:
 
@@ -49,3 +57,6 @@ The matrix has the following attributes:
 - **w** - width of matrix (number of columns)
 - **h** - height of matrix (number of rows)
 - **x,y** - coordinates of each element, such as 0,0;0,1;0,2 and so on.
+
+The function code is [here](https://github.com/dimoobraznii1986/e-assignment/blob/main/clockwise/clockwise.py)
+
