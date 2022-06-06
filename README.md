@@ -59,5 +59,6 @@ The matrix has the following attributes:
 - **h** - height of matrix (number of rows)
 - **x,y** - coordinates of each element, such as 0,0;0,1;0,2 and so on.
 
-The function code is [here](https://github.com/dimoobraznii1986/e-assignment/blob/main/clockwise/clockwise.py)
-
+The function codes:
+[solution 1](https://github.com/dimoobraznii1986/e-assignment/blob/main/clockwise/clockwise.py)
+[solution 2]([https://github.com/dimoobraznii1986/e-assignment/tree/main/clockwise](https://github.com/dimoobraznii1986/e-assignment/blob/main/clockwise/clockwise2.py))
