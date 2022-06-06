@@ -37,19 +37,15 @@ def clockWise2(Matrix):
       if d_column == 1:
         d_row = 1
         d_column = 0
-        print("take1")
       elif d_row == 1:
         d_row = 0
         d_column = -1
-        print("take2")
       elif d_column == -1:
         d_row = -1
         d_column = 0
-        print("take3")
       elif d_row == -1:
         d_row = 0
         d_column = 1
-        print("take4")
   
   return ' '.join(output)
   
