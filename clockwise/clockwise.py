@@ -12,7 +12,7 @@ def clockwiseMatrix(matrix):
     
     result = []
 
-    while x < w and y < w:
+    while x < h and y < w:
         #Print the 1st row
         for i in range(y,w):
             result.append(str(matrix[x][i]))
