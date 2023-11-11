@@ -1,0 +1,18 @@
+version: '3'
+services:
+  db:
+    build: ./db
+    ports:
+      - "5433:5432"
+    networks:
+      - tradesnetwork
+
+  jupyter:
+    build: ./jupyter
+    ports:
+      - "8888:8888"
+    networks:
+      - tradesnetwork
+
+networks:
+  tradesnetwork:
