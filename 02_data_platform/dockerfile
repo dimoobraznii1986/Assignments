@@ -4,7 +4,7 @@ FROM postgres:latest
 # Set environment variables
 ENV POSTGRES_USER=postgres
 ENV POSTGRES_PASSWORD=postgres
-ENV POSTGRES_DB=trades
+ENV POSTGRES_DB=tradedb
 
 # Set the working directory in the container to /docker-entrypoint-initdb.d
 WORKDIR /docker-entrypoint-initdb.d
@@ -14,6 +14,3 @@ COPY ./init.sql ./
 
 # Copy trades.csv into the Docker image
 COPY ./trades.csv ./
-
-# Run the SQL scripts on startup
-RUN echo "COPY TRADES FROM '/docker-entrypoint-initdb.d/trades.csv' DELIMITER ',' CSV HEADER;" >> /docker-entrypoint-initdb.d/init.sql
