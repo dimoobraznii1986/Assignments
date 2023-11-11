@@ -1,6 +1,12 @@
 # Use the official Jupyter Docker image
 FROM jupyter/base-notebook:latest
 
+# Install psycopg2 and pandas
+RUN pip install psycopg2-binary pandas
+
+# Copy trades_notebook.ipynb into the Docker image
+COPY trades_notebook.ipynb /home/jovyan/work/
+
 # Expose the port Jupyter runs on
 EXPOSE 8888
 
