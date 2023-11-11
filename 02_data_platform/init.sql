@@ -1,12 +1,9 @@
-CREATE DATABASE tradedb;
-
-\c tradedb;
-
 -- Create the raw schema
 CREATE SCHEMA raw;
 
+
 -- Create the trades table in the raw schema
-CREATE TABLE raw.trades (
+CREATE TABLE IF NOT EXISTS raw.trades (
     account_id INT,
     symbol VARCHAR(255),
     side VARCHAR(255),
