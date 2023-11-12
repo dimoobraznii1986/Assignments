@@ -8,11 +8,24 @@ services:
       - tradesnetwork
 
   jupyter:
+    depends_on:
+      - db
     build: ./jupyter
     ports:
       - "8888:8888"
     volumes:
-      - ./02_data_platform/jupyter/output:/home/jovyan/work/
+      - ./jupyter/output:/home/jovyan/work/
+    networks:
+      - tradesnetwork
+
+  dbt:
+    depends_on:
+      - db
+    build: ./dbt
+    ports:
+      - "80:80"
+    volumes:
+      - ./dbt/dbt_trades:/home/app/
     networks:
       - tradesnetwork
 

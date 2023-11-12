@@ -1,0 +1,12 @@
+default:
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: db
+      port: 5433
+      user: postgres
+      pass: postgres
+      dbname: tradedb
+      schema: raw
+  target: dev

@@ -16,7 +16,8 @@ Then we can run the commands:
 
 ```
 cd 02_data_platform/
-docker-compose up --build
+docker-compose build --no-cache
+docker-compose up
 ```
 
 ## What is Date Trades 
