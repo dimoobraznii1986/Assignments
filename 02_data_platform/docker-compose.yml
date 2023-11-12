@@ -11,6 +11,8 @@ services:
     build: ./jupyter
     ports:
       - "8888:8888"
+    volumes:
+      - ./02_data_platform/jupyter/output:/home/jovyan/work/
     networks:
       - tradesnetwork
 
