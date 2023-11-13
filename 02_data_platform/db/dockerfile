@@ -8,9 +8,3 @@ ENV POSTGRES_DB=tradedb
 
 # Set the working directory in the container to /docker-entrypoint-initdb.d
 WORKDIR /docker-entrypoint-initdb.d
-
-# Copy the SQL scripts into the Docker image
-COPY ./init.sql ./
-
-# Copy trades.csv into the Docker image
-COPY ./trades.csv ./

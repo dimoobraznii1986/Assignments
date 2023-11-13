@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_pdt_count
+    description: >
+      This model number of day trades per account
+    columns:
+      - name: account_id
+        description: The ID of the account involved in the trade.
+        tests:
+          - not_null
+          - unique
+      - name: pdt_count
+        description: The count of 'sell' transactions following a 'buy' transaction for each account.
+        tests:
+          - not_null

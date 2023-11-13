@@ -11,4 +11,4 @@ ADD . /app
 RUN pip install dbt-core dbt-postgres
 
 # Keep the container running
-CMD ["tail", "-f", "/dev/null"]
+CMD ["dbt", "run"]

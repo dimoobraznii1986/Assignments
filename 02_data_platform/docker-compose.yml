@@ -4,6 +4,8 @@ services:
     build: ./db
     ports:
       - "5433:5432"
+    volumes:
+      - ./db/data:/home/jovyan/work/
     networks:
       - tradesnetwork
 
