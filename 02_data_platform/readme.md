@@ -29,5 +29,8 @@ Day trades are counted regardless of share quantity or frequency throughout the 
 
 ## Solution 1
 
+TODO Python
 
 ## Solution 2
+
+TODO SQL dbt
