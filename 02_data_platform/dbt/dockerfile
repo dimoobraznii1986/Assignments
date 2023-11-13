@@ -7,8 +7,11 @@ WORKDIR /app
 # Add the current directory contents into the container at /app
 ADD . /app
 
+# Make the script executable
+RUN chmod +x /app/run_dbt_docs.sh
+
 # Install dbt-core and dbt-postgres
 RUN pip install dbt-core dbt-postgres
 
-# Keep the container running
-CMD ["dbt", "run"]
+# Run dbt docs
+CMD ["/app/run_dbt_docs.sh"]

@@ -25,11 +25,29 @@ services:
       - db
     build: ./dbt
     ports:
-      - "80:80"
+      - "8080:8080"
     volumes:
       - ./dbt/dbt_trades:/home/app/
     networks:
       - tradesnetwork
+
+  airflow:
+    environment:
+      - AIRFLOW_USERNAME
+      - AIRFLOW_PASSWORD
+      - AIRFLOW_FIRSTNAME
+      - AIRFLOW_LASTNAME
+      - AIRFLOW_ROLE
+      - AIRFLOW_EMAIL
+    build: ./airflow
+    ports:
+      - "8090:8080"
+    volumes:
+      - ./airflow/dags:/usr/local/airflow/dags
+      - ./output:/usr/local/airflow/output
+    depends_on:
+      - db
+    command: airflow standalone
 
 networks:
   tradesnetwork:
