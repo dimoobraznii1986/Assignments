@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS raw.trades (
 );
 
 -- Import data from the CSV file into the raw.trades table
-COPY raw.trades FROM '/docker-entrypoint-initdb.d/trades.csv' DELIMITER ',' CSV HEADER;
+COPY raw.trades FROM '/home/data/trades.csv' DELIMITER ',' CSV HEADER;
 
 -- Create schema for 
 CREATE SCHEMA analytics;

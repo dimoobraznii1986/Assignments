@@ -3,9 +3,14 @@ FROM apache/airflow:latest
 # Install additional dependencies (if any)
 # RUN pip install ...
 
+
+
 # Set the working directory
 WORKDIR /usr/local/airflow
 
-COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh .
 
-ENTRYPOINT ["/entrypoint.sh"]
+#RUN chmod +x entrypoint.sh
+
+
+ENTRYPOINT ["./entrypoint.sh"]
