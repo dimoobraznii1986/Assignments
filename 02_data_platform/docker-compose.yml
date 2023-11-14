@@ -45,7 +45,7 @@ services:
       - "8090:8080"
     volumes:
       - ./airflow/dags:/usr/local/airflow/dags
-      - ./output:/usr/local/airflow/output
+      - ./airflow/output:/usr/local/airflow/output
     depends_on:
       - db
     command: airflow standalone
