@@ -1,9 +1,7 @@
 FROM apache/airflow:latest
 
 # Install additional dependencies (if any)
-# RUN pip install ...
-
-
+RUN pip install 'apache-airflow[docker]'
 
 # Set the working directory
 WORKDIR /usr/local/airflow
