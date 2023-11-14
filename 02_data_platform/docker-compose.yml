@@ -39,6 +39,7 @@ services:
       - AIRFLOW_LASTNAME
       - AIRFLOW_ROLE
       - AIRFLOW_EMAIL
+      - AIRFLOW__CORE__DAGS_FOLDER=/usr/local/airflow/dags
     build: ./airflow
     ports:
       - "8090:8080"
@@ -47,6 +48,7 @@ services:
       - ./output:/usr/local/airflow/output
     depends_on:
       - db
+    command: airflow standalone
 
 networks:
   tradesnetwork:
