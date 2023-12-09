@@ -1,0 +1,25 @@
+name: 'dbt_trades'
+version: '1.7.1'
+config-version: 2
+
+profile: 'postgres'
+
+source-paths: ["models","sources"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+data-paths: ["data"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target" 
+clean-targets:         
+    - "target"
+    - "dbt_modules"
+
+models:
+  dbt_trades_model:
+      dbt_trades:
+        +schema: analytics
+        +tags:
+            -"analytics"
+        materialized: table

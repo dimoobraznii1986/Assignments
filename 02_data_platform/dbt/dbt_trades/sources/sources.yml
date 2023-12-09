@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: trades
+        description: > 
+          This model creates a dataset of buy-sell,sell-buy pairs from the trades table.
+          It counts the number of times each account has a sell transaction immediately following a buy transaction, grouped by account_id.

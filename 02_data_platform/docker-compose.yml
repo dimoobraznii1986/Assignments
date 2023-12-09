@@ -1,0 +1,54 @@
+version: '3'
+services:
+  db:
+    build: ./db
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./db/data:/home/data
+    networks:
+      - tradesnetwork
+
+  jupyter:
+    depends_on:
+      - db
+    build: ./jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./jupyter/output:/home/jovyan/work/
+    networks:
+      - tradesnetwork
+
+  dbt:
+    depends_on:
+      - db
+    build: ./dbt
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dbt/dbt_trades:/home/app/
+    networks:
+      - tradesnetwork
+
+  airflow:
+    environment:
+      - AIRFLOW_USERNAME
+      - AIRFLOW_PASSWORD
+      - AIRFLOW_FIRSTNAME
+      - AIRFLOW_LASTNAME
+      - AIRFLOW_ROLE
+      - AIRFLOW_EMAIL
+      - AIRFLOW__CORE__DAGS_FOLDER=/usr/local/airflow/dags
+    build: ./airflow
+    ports:
+      - "8090:8080"
+    volumes:
+      - ./airflow/dags:/usr/local/airflow/dags
+      - ./airflow/output:/usr/local/airflow/output
+    depends_on:
+      - db
+    command: airflow standalone
+
+networks:
+  tradesnetwork:

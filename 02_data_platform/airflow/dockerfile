@@ -1,0 +1,15 @@
+FROM apache/airflow:latest
+
+# Install additional dependencies (if any)
+RUN pip install 'apache-airflow[docker]'
+
+# Set the working directory
+WORKDIR /usr/local/airflow
+
+COPY entrypoint.sh ./entrypoint.sh
+
+USER root
+RUN chmod +x entrypoint.sh
+USER airflow
+
+ENTRYPOINT ["./entrypoint.sh"]
