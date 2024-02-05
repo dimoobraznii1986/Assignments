@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: soda-core
+Version: 3.1.5
+Summary: Soda Core library & CLI
+Author: Soda Data N.V.
+Author-email: info@soda.io
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: markupsafe <=2.1.2,>=2.0.1
+Requires-Dist: Jinja2 <4.0,>=2.11
+Requires-Dist: click ~=8.0
+Requires-Dist: ruamel.yaml <0.18.0,>=0.17.0
+Requires-Dist: requests ~=2.28
+Requires-Dist: antlr4-python3-runtime ~=4.11.1
+Requires-Dist: opentelemetry-api ~=1.16.0
+Requires-Dist: opentelemetry-exporter-otlp-proto-http ~=1.16.0
+Requires-Dist: sqlparse ~=0.4
+Requires-Dist: inflect ~=7.0
+Requires-Dist: pydantic <3.0.0,>=2.0.0
+

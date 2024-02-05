@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: soda-core-snowflake
+Version: 3.1.5
+License-File: LICENSE
+Requires-Dist: soda-core ==3.1.5
+Requires-Dist: snowflake-connector-python ~=3.0
+

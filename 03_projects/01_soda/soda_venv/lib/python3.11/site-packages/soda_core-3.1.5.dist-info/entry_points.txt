@@ -1,0 +1,2 @@
+[console_scripts]
+soda = soda.cli.cli:main
