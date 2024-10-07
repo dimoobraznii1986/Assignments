@@ -6,6 +6,8 @@
 
 ## How to start
 
+[Sumamry about the project](https://docs.google.com/document/d/1PNHW8KjP0V_PIcy_UxWZDRM6w2AMLxKg1co-UmPbOyg/edit#heading=h.vvmlfmwbv2yp)
+
 You can run the solution using `docker-compose up`. Before you will be run compose, we should upload data into the `02_data_platform/db/trades.csv` file in the format:
 
 ```
